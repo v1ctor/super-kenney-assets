@@ -9,10 +9,12 @@ public class CameraController : MonoBehaviour
     public float smoothingRate = 0.1f;
 
     private FocusArea focusArea;
+    private Vector3 offset;
 
     void Start()
     {
         focusArea = new FocusArea(focusObject.position, focusAreaSize);
+        offset = gameObject.transform.position - focusObject.position;
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class CameraController : MonoBehaviour
         float x = Mathf.Lerp(transform.position.x, focusArea.center.x, smoothingRate);
         float y = Mathf.Lerp(transform.position.y, focusArea.center.y, smoothingRate);
 
-        transform.position = new Vector3(x, y, transform.position.z);
+        transform.position = new Vector3(offset.x + x, offset.y + y, transform.position.z);
     }
 
     struct FocusArea
