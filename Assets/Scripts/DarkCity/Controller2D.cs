@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Controller2D : MonoBehaviour
@@ -119,6 +120,7 @@ public class Controller2D : MonoBehaviour
         Vector2 initialRayOrigin = isMovingDown ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
 
         initialRayOrigin.x += direction.x;
+        HashSet<Collider2D> hits = new HashSet<Collider2D>();
         for (int i = 0; i < verticalRayCount; i++)
         {
             Vector2 rayOrigin = new Vector2(initialRayOrigin.x + i * verticalRaySpacing, initialRayOrigin.y);
@@ -142,11 +144,17 @@ public class Controller2D : MonoBehaviour
                     collisions.above = true;
 
                     // HACK
-                    var boxController = hit.collider.gameObject.GetComponent<BoxController>();
-                    if (boxController != null) {
-                        boxController.Activate();
-                    }
+                    hits.Add(hit.collider);
                 }
+            }
+        }
+
+        foreach (var hit in hits) {
+            // HACK
+            var boxController = hit.gameObject.GetComponent<BoxController>();
+            if (boxController != null)
+            {
+                boxController.Activate();
             }
         }
     }
