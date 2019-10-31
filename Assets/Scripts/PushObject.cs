@@ -5,17 +5,13 @@ using UnityEngine;
 public class PushObject : MonoBehaviour
 {
 	public Transform target;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int limit;
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x <= target.position.x) {
+
+        if (transform.position.x < limit && transform.position.x <= target.position.x) {
             transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
         }  
     }
