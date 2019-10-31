@@ -48,11 +48,11 @@ TagManager:
   - name: Middle
     uniqueID: 1298727407
     locked: 0
-  - name: Player
-    uniqueID: 3236721269
-    locked: 0
   - name: Platform
     uniqueID: 3775819421
+    locked: 0
+  - name: Player
+    uniqueID: 3236721269
     locked: 0
   - name: Front
     uniqueID: 3932123001
