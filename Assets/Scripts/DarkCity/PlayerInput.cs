@@ -18,6 +18,9 @@ public class PlayerInput : MonoBehaviour
     private Vector2 input;
     private bool jumpPressed;
 
+    private int jumpFramesLeft = 0;
+    private const int jumpBufferingFrames = 4;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -35,7 +38,9 @@ public class PlayerInput : MonoBehaviour
         input = new Vector2(0, 0);
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        jumpPressed = Input.GetKeyDown(KeyCode.Space);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            jumpFramesLeft = jumpBufferingFrames;
+        }
     }
 
     void FixedUpdate()
@@ -76,13 +81,19 @@ public class PlayerInput : MonoBehaviour
 			animator.Play("Idle");
 		}
 
-		if (grounded && jumpPressed)
+		if (grounded && jumpFramesLeft > 0)
 		{
 			velocity.y = jumpVelocity;
 			animator.Play("Jump");
+            jumpFramesLeft = 0;
 		}
+        if (jumpFramesLeft > 0) {
+            jumpFramesLeft--;
+        }
+        
 
-		float targetVelocityX = input.x * moveSpeed;
+
+        float targetVelocityX = input.x * moveSpeed;
 
 		velocity.x = targetVelocityX;
 		velocity.y -= gravity * Time.deltaTime;
