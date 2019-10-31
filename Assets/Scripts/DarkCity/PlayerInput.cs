@@ -7,19 +7,25 @@ public class PlayerInput : MonoBehaviour
 	public float timeToJumpApex = .4f;
 	public float moveSpeed = 6;
 
-	private float jumpVelocity = 8;
+    public int jumpBufferingFrames = 4;
+    public int coyoteTimeFrames = 4;
+
+    
 
 	private Controller2D controller;
 	private Animator animator;
 
-	private float gravity = -20;
-	private Vector2 velocity;
-
     private Vector2 input;
-    private bool jumpPressed;
 
-    private int jumpFramesLeft = 0;
-    private const int jumpBufferingFrames = 4;
+    private float gravity;
+    private float jumpVelocity;
+    private Vector2 velocity;
+    private bool isGrounded;
+    private bool isJumping;
+
+    private int jumpFramesLeft;
+    private int coyoteTimeLeft;
+    
 
 	// Use this for initialization
 	void Start()
@@ -35,9 +41,11 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        input = new Vector2(0, 0);
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        input = new Vector2(0, 0)
+        {
+            x = Input.GetAxisRaw("Horizontal"),
+            y = Input.GetAxisRaw("Vertical")
+        };
         if (Input.GetKeyDown(KeyCode.Space)) {
             jumpFramesLeft = jumpBufferingFrames;
         }
@@ -45,8 +53,13 @@ public class PlayerInput : MonoBehaviour
 
     void FixedUpdate()
 	{
-		bool grounded = controller.collisions.below;
-
+        bool wasGrounded = isGrounded;
+        isGrounded = controller.collisions.below;
+        if (wasGrounded && !isGrounded && !isJumping) {
+            coyoteTimeLeft = coyoteTimeFrames;
+        }
+        isJumping &= !isGrounded;
+        
         if (controller.collisions.above || controller.collisions.below)
         {
             velocity.y = 0f;
@@ -59,7 +72,7 @@ public class PlayerInput : MonoBehaviour
 			{
 				transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			}
-			if (grounded)
+			if (isGrounded)
 			{
 				animator.Play("Run");
 			}
@@ -71,24 +84,30 @@ public class PlayerInput : MonoBehaviour
 			{
 				transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			}
-			if (grounded)
+			if (isGrounded)
 			{
 				animator.Play("Run");
 			}
 		}
-		else if (grounded)
+		else if (isGrounded)
 		{
 			animator.Play("Idle");
 		}
 
-		if (grounded && jumpFramesLeft > 0)
+		if ((isGrounded || coyoteTimeLeft > 0) && jumpFramesLeft > 0)
 		{
 			velocity.y = jumpVelocity;
-			animator.Play("Jump");
+            isJumping = true;
+            animator.Play("Jump");
             jumpFramesLeft = 0;
+            coyoteTimeLeft = 0;
 		}
         if (jumpFramesLeft > 0) {
             jumpFramesLeft--;
+        }
+
+        if (coyoteTimeLeft > 0) {
+            coyoteTimeLeft--;
         }
         
 
