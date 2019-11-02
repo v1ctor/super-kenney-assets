@@ -13,11 +13,18 @@ public class BoxController : MonoBehaviour
     }
 
     public void Activate() {
-        if (item.HasMore())
+        if (item != null)
         {
-            animator.Play("CoinAnimation");
-            item.Activate();
+            if (item.HasMore())
+            {
+                animator.Play("Hit");
+                item.Activate();
+            }
+            animator.SetBool("active", item.HasMore());
         }
-        animator.SetBool("active", item.HasMore());
+        else {
+            animator.Play("Hit");
+        }
+        
     }
 }

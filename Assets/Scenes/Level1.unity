@@ -187,6 +187,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &14441528 stripped
@@ -973,6 +981,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &148960532 stripped
@@ -1052,7 +1068,11 @@ PrefabInstance:
       propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2091843930}
-    - target: {fileID: 1106793356, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
       propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CoinCollected
       objectReference: {fileID: 0}
@@ -2614,6 +2634,14 @@ PrefabInstance:
       propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CoinCollected
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &568658881 stripped
@@ -3479,6 +3507,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
@@ -4745,6 +4781,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
@@ -7201,6 +7245,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &1233452708 stripped
@@ -7547,6 +7599,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
@@ -9044,6 +9104,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &1702425378 stripped
@@ -9132,25 +9200,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1806186968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 305864938726998027, guid: f13a784b387ac4cff9aa7c7c566361a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3818705992345045684}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1806186969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806186968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36dabf435794e43a3850d039a5bff49c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
 --- !u!1 &1848062207
 GameObject:
   m_ObjectHideFlags: 0
@@ -16549,6 +16598,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &1995458433 stripped
@@ -16623,6 +16680,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
@@ -17221,6 +17286,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!4 &2132147959 stripped
@@ -17394,10 +17467,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1106793356, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+    - target: {fileID: 5356455797300314571, guid: 7a346c09edf954275b1897e19c2acf0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce66cffcdef0441079d1312c0739adea,
+        type: 3}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
       propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2091843930}
+    - target: {fileID: 276443355, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
+      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CoinCollected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a346c09edf954275b1897e19c2acf0b, type: 3}
 --- !u!1001 &3818705992345045684
