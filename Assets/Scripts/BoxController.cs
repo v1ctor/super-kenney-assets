@@ -24,6 +24,7 @@ public class BoxController : MonoBehaviour
         }
         else {
             animator.Play("Hit");
+            animator.SetBool("active", true);
         }
         
     }
