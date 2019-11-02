@@ -44,7 +44,6 @@ public class PlayerInput : MonoBehaviour
         input = new Vector2(0, 0)
         {
             x = Input.GetAxisRaw("Horizontal"),
-            y = Input.GetAxisRaw("Vertical")
         };
         if (Input.GetKeyDown(KeyCode.Space)) {
             jumpFramesLeft = jumpBufferingFrames;

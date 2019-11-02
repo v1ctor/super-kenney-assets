@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BoxController : MonoBehaviour
 {
-    public int amount = 1;
+    public IBoxItem item;
 
     private Animator animator;
 
@@ -12,22 +10,14 @@ public class BoxController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetInteger("amount", amount);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Activate() {
-        if (amount > 0) {
-            amount--;
+        if (item.HasMore())
+        {
             animator.Play("CoinAnimation");
+            item.Activate();
         }
-
-        animator.SetInteger("amount", amount);
-        
+        animator.SetBool("active", item.HasMore());
     }
 }
